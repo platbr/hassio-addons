@@ -30,7 +30,7 @@ RUN sed -i "s|config|config/transmission|g" /etc/services.d/transmission/run \
     && sed -i 's/{PUID:-911}/(bashio::config "PUID")/g' /etc/cont-init.d/10-adduser \
     && sed -i 's/{PGID:-911}/(bashio::config "PGID")/g' /etc/cont-init.d/10-adduser \
     # Small hack needed for ingress support
-    sed -i 's|'"'"'\.\./rpc'"'"'|window.location.pathname.endsWith("/web/") ? "../rpc" : "rpc"|' /usr/share/transmission/web/javascript/remote.js
+    sed -i 's|url: RPC._Root|url: window.location.pathname.endsWith("/web/") ? RPC._Root : "rpc"|g' /usr/share/transmission/web/javascript/remote.js
 
 ##################
 # 3 Install apps #
