@@ -54,6 +54,7 @@
     "download_dir": "/share/downloads",
     "incomplete_dir": "/share/incomplete"
   },
+  "ingress": true,
   "ports": {
     "51413/tcp": 51413,
     "51413/udp": 51413,
