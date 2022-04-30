@@ -28,9 +28,7 @@ RUN sed -i "s|config|config/transmission|g" /etc/services.d/transmission/run \
     # Allow UID and GID setting
     && sed -i 's/bash/bashio/g' /etc/cont-init.d/10-adduser \
     && sed -i 's/{PUID:-911}/(bashio::config "PUID")/g' /etc/cont-init.d/10-adduser \
-    && sed -i 's/{PGID:-911}/(bashio::config "PGID")/g' /etc/cont-init.d/10-adduser \
-    # Small hack needed for ingress support
-    sed -i 's|url: RPC._Root|url: window.location.pathname.endsWith("/web/") ? RPC._Root : "rpc"|g' /usr/share/transmission/web/javascript/remote.js
+    && sed -i 's/{PGID:-911}/(bashio::config "PGID")/g' /etc/cont-init.d/10-adduser
 
 ##################
 # 3 Install apps #
@@ -59,6 +57,8 @@ RUN if ! command -v bash >/dev/null 2>/dev/null; then (apt-get update && apt-get
     && chmod 777 /automatic_packages.sh \
     && eval /./automatic_packages.sh "${PACKAGES:-}" \
     && rm /automatic_packages.sh || printf '%s\n' "${PACKAGES:-}" > /ENVFILE
+
+RUN sed -i 's|url: RPC._Root|url: window.location.pathname.endsWith("/web/") ? RPC._Root : "rpc"|g' /usr/share/transmission/web/javascript/remote.js
 
 ################
 # 4 Entrypoint #
