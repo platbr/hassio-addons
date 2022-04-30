@@ -4,5 +4,5 @@
   "slug": "radarr",
   "source": "github",
   "upstream_repo": "linuxserver/docker-radarr",
-  "upstream_version": "4.1.0.6175"
+  "upstream_version": "4.1.0.6176"
 }
