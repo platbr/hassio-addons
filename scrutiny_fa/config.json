@@ -15,6 +15,7 @@
   "full_access": true,
   "image": "ghcr.io/alexbelgium/scrutiny-fa-{arch}",
   "ingress": true,
+  "init": false,
   "name": "Scrutiny (Full Access)",
   "options": {
     "PGID": 0,
@@ -47,6 +48,7 @@
   },
   "slug": "scrutiny_fa",
   "startup": "services",
+  "udev": true,
   "url": "https://github.com/AnalogJ/scrutiny",
-  "version": "0.3.13-17"
+  "version": "2ab714f5-ls35-2"
 }

@@ -1,10 +1,10 @@
-# Home assistant add-on: Zoneminder
+# Home assistant add-on: Unpackerr
 
 [![Donate][donation-badge]](https://www.buymeacoffee.com/alexbelgium)
 
-![Version](https://img.shields.io/badge/dynamic/json?label=Version&query=%24.version&url=https%3A%2F%2Fraw.githubusercontent.com%2Falexbelgium%2Fhassio-addons%2Fmaster%2Fzoneminder%2Fconfig.json)
-![Ingress](https://img.shields.io/badge/dynamic/json?label=Ingress&query=%24.ingress&url=https%3A%2F%2Fraw.githubusercontent.com%2Falexbelgium%2Fhassio-addons%2Fmaster%2Fzoneminder%2Fconfig.json)
-![Arch](https://img.shields.io/badge/dynamic/json?color=success&label=Arch&query=%24.arch&url=https%3A%2F%2Fraw.githubusercontent.com%2Falexbelgium%2Fhassio-addons%2Fmaster%2Fzoneminder%2Fconfig.json)
+![Version](https://img.shields.io/badge/dynamic/json?label=Version&query=%24.version&url=https%3A%2F%2Fraw.githubusercontent.com%2Falexbelgium%2Fhassio-addons%2Fmaster%2Funpackerr%2Fconfig.json)
+![Ingress](https://img.shields.io/badge/dynamic/json?label=Ingress&query=%24.ingress&url=https%3A%2F%2Fraw.githubusercontent.com%2Falexbelgium%2Fhassio-addons%2Fmaster%2Funpackerr%2Fconfig.json)
+![Arch](https://img.shields.io/badge/dynamic/json?color=success&label=Arch&query=%24.arch&url=https%3A%2F%2Fraw.githubusercontent.com%2Falexbelgium%2Fhassio-addons%2Fmaster%2Funpackerr%2Fconfig.json)
 
 [![Codacy Badge](https://app.codacy.com/project/badge/Grade/9c6cf10bdbba45ecb202d7f579b5be0e)](https://www.codacy.com/gh/alexbelgium/hassio-addons/dashboard?utm_source=github.com&utm_medium=referral&utm_content=alexbelgium/hassio-addons&utm_campaign=Badge_Grade)
 [![GitHub Super-Linter](https://github.com/alexbelgium/hassio-addons/workflows/Lint%20Code%20Base/badge.svg)](https://github.com/marketplace/actions/super-linter)
@@ -18,15 +18,15 @@ _Thanks to everyone having starred my repo! To star it click on the image below,
 
 ## About
 
-["Zoneminder"](https://zoneminder.com/) is a full-featured, open source, state-of-the-art video surveillance software system.
+---
 
-This addon is based on the docker image https://github.com/ZoneMinder/zmdockerfiles/blob/master/utils/entrypoint.sh
+[unpackerr](https://github.com/unpackerr/unpackerr) runs as a daemon on your download host. It checks for completed downloads and extracts them so Lidarr, Radarr, Readarr, Sonarr may import them. There are a handful of options out there for extracting and deleting files after your client downloads them. I just didn't care for any of them, so I wrote my own. I wanted a small single-binary with reasonable logging that can extract downloaded archives and clean up the mess after they've been imported.
 
-## Configuration
-
-Read official documentation for information how to set : https://github.com/ZoneMinder/zmdockerfiles/blob/master/utils/entrypoint.sh
+This addon is based on the docker image https://hub.docker.com/r/golift/unpackerr
 
 ## Installation
+
+---
 
 The installation of this add-on is pretty straightforward and not different in comparison to installing any other add-on.
 
@@ -39,9 +39,14 @@ The installation of this add-on is pretty straightforward and not different in c
 1. Check the logs of the add-on to see if everything went well.
 1. Open the webUI and adapt the software options
 
-## Integration in home assistant
+## Configuration
 
-https://www.home-assistant.io/integrations/zoneminder/
+No webui.
+
+Create a file named "unpackerr.conf" in /config.
+In /config/unpackerr.conf you can set all variables according to this list of environment variables : https://github.com/davidnewhall/unpackerr
+
+By default, unpackerr takes files in "/share/downloads_packed" and extracts them to "/share/downloads_unpacked"
 
 ## Support
 
@@ -49,6 +54,8 @@ Create an issue on github
 
 ## Illustration
 
-![viewmonitor-stream](https://user-images.githubusercontent.com/44178713/157933856-33ed3d44-6b91-4ce2-8a9b-daf9b618176c.png)
+---
+
+![illustration](https://wiki.servarr.com/assets/unpackerr/hist_1_history.png)
 
 [repository]: https://github.com/alexbelgium/hassio-addons

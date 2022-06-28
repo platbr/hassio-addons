@@ -15,6 +15,8 @@
     "/dev/sdf",
     "/dev/sdg",
     "/dev/nvme",
+    "/dev/nvme0n1p1",
+    "/dev/nvme0n1p2",
     "/dev/mmcblk",
     "/dev/sda1",
     "/dev/sdb1",
@@ -39,15 +41,16 @@
     "/dev/nvme2"
   ],
   "environment": {
-    "PGID": "0",
-    "PUID": "0",
     "CALIBRE_CONFIG_DIRECTORY": "/config/addons_config/calibre",
     "FM_HOME": "/config/addons_config/calibre",
     "HOME": "/config/addons_config/calibre",
+    "PGID": "0",
+    "PUID": "0",
     "shm_size": "1gb"
   },
   "image": "ghcr.io/alexbelgium/calibre-{arch}",
   "ingress": true,
+  "init": false,
   "map": [
     "media:rw",
     "share:rw",
@@ -56,25 +59,29 @@
   ],
   "name": "Calibre",
   "options": {
-    "PGID": 0,
-    "PUID": 0
+    "PGID": 1000,
+    "PUID": 1000
   },
-  "panel_icon": "mdi:library",
+  "panel_icon": "mdi:book-multiple",
   "ports": {
     "8080/tcp": 8080,
     "8081/tcp": 8081
   },
   "ports_description": {
     "8080/tcp": "Calibre desktop gui",
-    "8081/tcp": "Calibre webserver gui"
+    "8081/tcp": "Calibre webserver gui, to be enabled within the desktop gui"
   },
-  "privileged": [],
+  "privileged": [
+    "SYS_ADMIN",
+    "DAC_READ_SEARCH",
+    "NET_ADMIN"
+  ],
   "schema": {
+    "CLI_ARGS": "str?",
+    "PASSWORD": "str?",
     "PGID": "int",
     "PUID": "int",
     "TZ": "str?",
-    "PASSWORD": "str?",
-    "CLI_ARGS": "str?",
     "cifspassword": "str?",
     "cifsusername": "str?",
     "localdisks": "str?",
@@ -82,6 +89,6 @@
   },
   "slug": "calibre",
   "url": "https://github.com/alexbelgium/hassio-addons/tree/master/calibre",
-  "version": "v5.38",
+  "version": "v5.38-3",
   "video": true
 }

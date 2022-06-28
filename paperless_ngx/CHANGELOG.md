@@ -1,4 +1,40 @@
 
+## v1.7.1-ls19 (25-06-2022)
+- Update to latest version from linuxserver/docker-paperless-ngx
+
+## v1.7.1-ls18 (18-06-2022)
+- Update to latest version from linuxserver/docker-paperless-ngx
+
+## v1.7.1-ls17 (11-06-2022)
+- Update to latest version from linuxserver/docker-paperless-ngx
+
+## v1.7.1-ls16 (04-06-2022)
+- Update to latest version from linuxserver/docker-paperless-ngx
+
+## v1.7.1-ls15 (31-05-2022)
+- Update to latest version from linuxserver/docker-paperless-ngx
+
+## v1.7.1-ls14 (19-05-2022)
+- Update to latest version from linuxserver/docker-paperless-ngx
+
+## v1.7.1-ls13 (17-05-2022)
+- Update to latest version from linuxserver/docker-paperless-ngx
+
+## v1.7.1-ls12 (14-05-2022)
+- Update to latest version from linuxserver/docker-paperless-ngx
+
+## v1.7.1-ls10 (12-05-2022)
+- Update to latest version from linuxserver/docker-paperless-ngx
+
+## ngx-1.7.0-ls9 (10-05-2022)
+- Update to latest version from linuxserver/docker-paperless-ngx
+
+## ngx-1.7.0-ls8 (06-05-2022)
+- Update to latest version from linuxserver/docker-paperless-ngx
+
+## ngx-1.7.0-ls7 (01-05-2022)
+- Update to latest version from linuxserver/docker-paperless-ngx
+
 ## ngx-1.7.0-ls6 (29-04-2022)
 - Update to latest version from linuxserver/docker-paperless-ngx
 

@@ -7,6 +7,7 @@ bazarr: bazarr/config.*
 bitwarden: bitwarden/config.*
 booksonic_air: booksonic_air/config.*
 calibre: calibre/config.* # Image : yes
+calibre_web: calibre_web/config.* # Image : yes
 cloudcommander: cloudcommander/config.*
 code-server: code-server/config.*
 elasticsearch: elasticsearch/config.*
@@ -21,7 +22,7 @@ flaresolverr: flaresolverr/config.*
 flexget: flexget/config.*
 gazpar2mqtt: gazpar2mqtt/config.*
 grav: grav/config.*
-guacd: guacd/config.*
+guacamole: guacamole/config.* # Image : yes
 inadyn: inadyn/config.*
 jackett: jackett/config.*
 jellyfin: jellyfin/config.*
@@ -51,13 +52,16 @@ requestrr: requestrr/config.*
 resiliosync: resiliosync/config.*
 scrutiny: scrutiny/config.*
 scrutiny_fa: scrutiny_fa/config.* # Image : yes
+seafile: seafile/config.* # Image : yes
 sonarr: sonarr/config.*
 spotweb: spotweb/config.* # Image : yes
 tandoor_recipes: tandoor_recipes/config.*
 tdarr: tdarr/config.* # Image : yes
 teamspeak: teamspeak/config.*
 transmission: transmission/config.*
+transmission_openvpn: transmission_openvpn/config.* # Image : yes
 ubooquity: ubooquity/config.*
+unpackerr: unpackerr/config.* # Image : yes
 webtop: webtop/config.*
 webtop_kde: webtop_kde/config.* # Image : yes
 webtrees: webtrees/config.* # Image : yes

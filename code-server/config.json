@@ -15,6 +15,8 @@
     "/dev/sdf",
     "/dev/sdg",
     "/dev/nvme",
+    "/dev/nvme0n1p1",
+    "/dev/nvme0n1p2",
     "/dev/mmcblk",
     "/dev/sda1",
     "/dev/sdb1",
@@ -38,6 +40,7 @@
     "/dev/nvme1",
     "/dev/nvme2"
   ],
+  "init": false,
   "map": [
     "backup:rw",
     "config:rw",
@@ -72,6 +75,6 @@
   "slug": "code-server",
   "startup": "services",
   "url": "https://github.com/alexbelgium/hassio-addons/tree/master/coder-server",
-  "version": "4.3.0",
+  "version": "4.4.0",
   "webui": "http://[HOST]:[PORT:8443]"
 }

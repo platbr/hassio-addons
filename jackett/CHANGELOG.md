@@ -1,4 +1,85 @@
 
+## 0.20.1246 (28-06-2022)
+- Update to latest version from linuxserver/docker-jackett
+
+## 0.20.1216 (25-06-2022)
+- Update to latest version from linuxserver/docker-jackett
+
+## 0.20.1211 (23-06-2022)
+- Update to latest version from linuxserver/docker-jackett
+
+## 0.20.1208 (21-06-2022)
+- Update to latest version from linuxserver/docker-jackett
+
+## 0.20.1197 (18-06-2022)
+- Update to latest version from linuxserver/docker-jackett
+
+## 0.20.1196 (16-06-2022)
+- Update to latest version from linuxserver/docker-jackett
+
+## 0.20.1175 (14-06-2022)
+- Update to latest version from linuxserver/docker-jackett
+
+## 0.20.1168 (11-06-2022)
+- Update to latest version from linuxserver/docker-jackett
+
+## 0.20.1154 (09-06-2022)
+- Update to latest version from linuxserver/docker-jackett
+
+## 0.20.1150 (07-06-2022)
+- Update to latest version from linuxserver/docker-jackett
+
+## 0.20.1148 (06-06-2022)
+- Update to latest version from linuxserver/docker-jackett
+
+## 0.20.1131 (04-06-2022)
+- Update to latest version from linuxserver/docker-jackett
+
+## 0.20.1127 (02-06-2022)
+- Update to latest version from linuxserver/docker-jackett
+
+## 0.20.1120 (31-05-2022)
+- Update to latest version from linuxserver/docker-jackett
+
+## 0.20.1102 (26-05-2022)
+- Update to latest version from linuxserver/docker-jackett
+
+## 0.20.1101 (24-05-2022)
+- Update to latest version from linuxserver/docker-jackett
+
+## 0.20.1088 (21-05-2022)
+- Update to latest version from linuxserver/docker-jackett
+
+## 0.20.1076 (19-05-2022)
+- Update to latest version from linuxserver/docker-jackett
+
+## 0.20.1066 (17-05-2022)
+- Update to latest version from linuxserver/docker-jackett
+
+## 0.20.1053 (14-05-2022)
+- Update to latest version from linuxserver/docker-jackett
+
+## 0.20.1050 (12-05-2022)
+- Update to latest version from linuxserver/docker-jackett
+
+## 0.20.1047 (11-05-2022)
+- Update to latest version from linuxserver/docker-jackett
+
+## 0.20.1038 (10-05-2022)
+- Update to latest version from linuxserver/docker-jackett
+
+## 0.20.1018 (06-05-2022)
+- Update to latest version from linuxserver/docker-jackett
+
+## 0.20.1010 (05-05-2022)
+- Update to latest version from linuxserver/docker-jackett
+
+## 0.20.1001 (03-05-2022)
+- Update to latest version from linuxserver/docker-jackett
+
+## 0.20.993 (01-05-2022)
+- Update to latest version from linuxserver/docker-jackett
+
 ## 0.20.986 (29-04-2022)
 - Update to latest version from linuxserver/docker-jackett
 

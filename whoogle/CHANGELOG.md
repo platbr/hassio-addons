@@ -1,4 +1,11 @@
 
+## 0.7.4 (14-06-2022)
+- Update to latest version from benbusby/whoogle-search
+
+## 0.7.3 (04-06-2022)
+- Update to latest version from benbusby/whoogle-search
+- Addition of ingress
+
 ## 0.7.2 (27-04-2022)
 - Update to latest version from benbusby/whoogle-search
 - Add codenotary sign

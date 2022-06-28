@@ -1,6 +1,14 @@
 #!/usr/bin/env bashio
 # shellcheck shell=bash
 
+############
+# Base url #
+############
+
+#PHOTOPRISM_SITE_URL="$(bashio::config 'PHOTOPRISM_SITE_URL')$(bashio::addon.ingress_entry)"
+#bashio::log.blue "Site url : $PHOTOPRISM_SITE_URL"
+#export PHOTOPRISM_SITE_URL
+
 ###################
 # Define database #
 ###################
@@ -42,7 +50,10 @@ case $(bashio::config 'DB_TYPE') in
         bashio::log.warning "Please ensure this is included in your backups"
         bashio::log.warning "Uninstalling the MariaDB addon will remove any data"
 
-        mysql --host="$(bashio::services 'mysql' 'host')" --port="$(bashio::services 'mysql' 'port')" --user="$PHOTOPRISM_DATABASE_USER" --password="$PHOTOPRISM_DATABASE_PASSWORD" -e"CREATE DATABASE IF NOT EXISTS $PHOTOPRISM_DATABASE_NAME; CHARACTER SET = utf8mb4; COLLATE = utf8mb4_unicode_ci;" || true
+        # Create database
+        mysql --host="$(bashio::services 'mysql' 'host')" --port="$(bashio::services 'mysql' 'port')" --user="$PHOTOPRISM_DATABASE_USER" --password="$PHOTOPRISM_DATABASE_PASSWORD" -e"CREATE DATABASE IF NOT EXISTS $PHOTOPRISM_DATABASE_NAME;"
+        # Force character set
+        mysql --host="$(bashio::services 'mysql' 'host')" --port="$(bashio::services 'mysql' 'port')" --user="$PHOTOPRISM_DATABASE_USER" --password="$PHOTOPRISM_DATABASE_PASSWORD" -e"ALTER DATABASE $PHOTOPRISM_DATABASE_NAME CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_ci;" || true
         ;;
 esac
 
@@ -81,4 +92,9 @@ bashio::log.info "Please wait 1 or 2 minutes to allow the server to load"
 bashio::log.info 'Default username : admin, default password: "please_change_password"'
 
 cd /
-./entrypoint_photoprism.sh photoprism start
+./scripts/entrypoint.sh photoprism start & bashio::log.info "Starting, please wait for next green text..."
+
+bashio::net.wait_for 2341 localhost 900
+bashio::log.info "App launched"
+
+exec nginx

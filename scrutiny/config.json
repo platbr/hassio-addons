@@ -16,6 +16,8 @@
     "/dev/sdf",
     "/dev/sdg",
     "/dev/nvme",
+    "/dev/nvme0n1p1",
+    "/dev/nvme0n1p2",
     "/dev/mmcblk",
     "/dev/sda1",
     "/dev/sdb1",
@@ -48,6 +50,7 @@
     "SCRUTINY_WEB": "true"
   },
   "ingress": true,
+  "init": false,
   "name": "Scrutiny",
   "options": {
     "PGID": 0,
@@ -82,5 +85,5 @@
   "startup": "services",
   "udev": true,
   "url": "https://github.com/AnalogJ/scrutiny",
-  "version": "0.3.13-7"
+  "version": "2ab714f5-ls35"
 }

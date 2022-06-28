@@ -1,4 +1,28 @@
 
+## 4.8.0.3 (25-06-2022)
+- Update to latest version from linuxserver/docker-emby
+
+## 4.8.0.2 (21-06-2022)
+- Update to latest version from linuxserver/docker-emby
+
+## 4.8.0.1 (18-06-2022)
+- Update to latest version from linuxserver/docker-emby
+
+## 4.8.0.0 (24-05-2022)
+- Update to latest version from linuxserver/docker-emby
+
+## 4.7.0.60 (19-05-2022)
+- Update to latest version from linuxserver/docker-emby
+
+## 4.7.0.39 (14-05-2022)
+- Update to latest version from linuxserver/docker-emby
+
+## 4.7.0.38 (07-05-2022)
+- Update to latest version from linuxserver/docker-emby
+
+## 4.7.0.37 (05-05-2022)
+- Update to latest version from linuxserver/docker-emby
+
 ## 4.7.0.36 (26-04-2022)
 - Update to latest version from linuxserver/docker-emby
 - Beta: inclusion of Ingress (please report issues)

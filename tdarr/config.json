@@ -22,6 +22,8 @@
     "/dev/sdf",
     "/dev/sdg",
     "/dev/nvme",
+    "/dev/nvme0n1p1",
+    "/dev/nvme0n1p2",
     "/dev/mmcblk",
     "/dev/sda1",
     "/dev/sdb1",
@@ -97,7 +99,7 @@
   },
   "slug": "tdarr",
   "url": "https://github.com/alexbelgium/hassio-addons",
-  "version": "2.00.18.1",
+  "version": "2.00.18.2",
   "video": true,
   "webui": "[PROTO:ssl]://[HOST]:[PORT:8265]"
 }

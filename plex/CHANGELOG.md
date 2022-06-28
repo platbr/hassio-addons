@@ -1,4 +1,28 @@
 
+## 1.27.1.5916-6b0e31a64-ls121 (25-06-2022)
+- Update to latest version from linuxserver/docker-plex
+
+## 1.27.0.5897-3940636f2-ls120 (16-06-2022)
+- Update to latest version from linuxserver/docker-plex
+
+## 1.26.2.5797-5bd057d2b-ls118 (02-06-2022)
+- Update to latest version from linuxserver/docker-plex
+
+## 1.26.2.5797-5bd057d2b-ls117 (26-05-2022)
+- Update to latest version from linuxserver/docker-plex
+
+## 1.26.1.5798-99a4a6ac9-ls115 (19-05-2022)
+- Update to latest version from linuxserver/docker-plex
+
+## 1.26.1.5798-99a4a6ac9-ls114 (17-05-2022)
+- Update to latest version from linuxserver/docker-plex
+
+## 1.26.0.5715-8cf78dab3-ls113 (11-05-2022)
+- Update to latest version from linuxserver/docker-plex
+
+## 1.26.0.5715-8cf78dab3-ls112 (03-05-2022)
+- Update to latest version from linuxserver/docker-plex
+
 ## 1.26.0.5715-8cf78dab3-ls111 (22-04-2022)
 - Update to latest version from linuxserver/docker-plex
 

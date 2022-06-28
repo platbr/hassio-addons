@@ -16,6 +16,8 @@
     "/dev/sdf",
     "/dev/sdg",
     "/dev/nvme",
+    "/dev/nvme0n1p1",
+    "/dev/nvme0n1p2",
     "/dev/mmcblk",
     "/dev/sda1",
     "/dev/sdb1",
@@ -39,13 +41,15 @@
     "/dev/nvme1",
     "/dev/nvme2"
   ],
+  "ingress": true,
+  "init": false,
   "map": [
     "config:rw",
     "share:rw",
     "media:rw",
     "ssl"
   ],
-  "name": "Transmission NAS",
+  "name": "Transmission",
   "options": {
     "DNS_server": "8.8.8.8,1.1.1.1",
     "PGID": 0,
@@ -54,6 +58,7 @@
     "download_dir": "/share/downloads",
     "incomplete_dir": "/share/incomplete"
   },
+  "panel_icon": "mdi:transmission-tower",
   "ports": {
     "51413/tcp": 51413,
     "51413/udp": 51413,
@@ -83,11 +88,11 @@
     "pass": "str?",
     "smbv1": "bool?",
     "user": "str?",
+    "watch_dir": "str?",
     "whitelist": "str?"
   },
   "slug": "transmission_ls",
   "startup": "services",
   "url": "https://github.com/alexbelgium/hassio-addons",
-  "version": "3.00-r5-ls122",
-  "webui": "http://[HOST]:[PORT:9091]"
+  "version": "3.00-r5-ls125-3"
 }

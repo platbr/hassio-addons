@@ -1,6 +1,21 @@
 #!/usr/bin/env bashio
 # shellcheck shell=bash
 
+############
+# TIMEZONE #
+############
+
+if bashio::config.has_value 'TZ'; then
+    TIMEZONE=$(bashio::config 'TZ')
+    bashio::log.info "Setting timezone to $TIMEZONE"
+    if [ -f /usr/share/zoneinfo/"$TIMEZONE" ]; then
+        ln -snf /usr/share/zoneinfo/"$TIMEZONE" /etc/localtime
+        echo "$TIMEZONE" >/etc/timezone
+    else
+        bashio::log.fatal "$TIMEZONE not found, are you sure it is a valid timezone?"
+    fi
+fi
+
 ###################
 # SSL CONFIG v1.0 #
 ###################

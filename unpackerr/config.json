@@ -1,0 +1,24 @@
+{
+  "arch": [
+    "aarch64",
+    "amd64",
+    "armv7"
+  ],
+  "codenotary": "alexandrep.github@gmail.com",
+  "description": "Unpacks RARd files for Sonarr, Lidarr and Radarr",
+  "environment": {
+    "UN_FOLDER_0_EXTRACT_PATH": "/share/downloads_unpacked",
+    "UN_FOLDER_0_PATH": "/share/downloads_packed"
+  },
+  "image": "ghcr.io/alexbelgium/unpackerr-{arch}",
+  "map": [
+    "config:rw",
+    "share:rw",
+    "media:rw",
+    "ssl"
+  ],
+  "name": "Unpackerr",
+  "slug": "unpackerr",
+  "url": "https://github.com/alexbelgium/hassio-addons",
+  "version": "0.10.0"
+}

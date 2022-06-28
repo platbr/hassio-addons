@@ -16,6 +16,8 @@
     "/dev/sdf",
     "/dev/sdg",
     "/dev/nvme",
+    "/dev/nvme0n1p1",
+    "/dev/nvme0n1p2",
     "/dev/mmcblk",
     "/dev/sda1",
     "/dev/sdb1",
@@ -39,6 +41,8 @@
     "/dev/nvme1",
     "/dev/nvme2"
   ],
+  "ingress": true,
+  "init": false,
   "map": [
     "share:rw",
     "config:rw"
@@ -46,8 +50,11 @@
   "name": "ResilioSync",
   "options": {
     "PGID": 0,
-    "PUID": 0
+    "PUID": 0,
+    "config_location": "/config/addons_config/resioliosync",
+    "data_location": "/share/resioliosync"
   },
+  "panel_icon": "mdi:cloud-sync-outline",
   "ports": {
     "55555/tcp": 55555,
     "8888/tcp": 8888
@@ -68,11 +75,12 @@
     "cifsdomain": "str?",
     "cifspassword": "str?",
     "cifsusername": "str?",
+    "config_location": "str",
+    "data_location": "str",
     "localdisks": "str?",
     "networkdisks": "str?"
   },
   "slug": "resiliosync",
   "url": "https://github.com/tyjtyj/hassio-addons",
-  "version": "2.7.3.1381",
-  "webui": "http://[HOST]:[PORT:8888]"
+  "version": "2.7.3.1381-4"
 }

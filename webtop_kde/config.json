@@ -28,6 +28,8 @@
     "/dev/sdf",
     "/dev/sdg",
     "/dev/nvme",
+    "/dev/nvme0n1p1",
+    "/dev/nvme0n1p2",
     "/dev/mmcblk",
     "/dev/sda1",
     "/dev/sdb1",
@@ -62,6 +64,7 @@
   "host_dbus": true,
   "image": "ghcr.io/alexbelgium/webtop-kde-{arch}",
   "ingress": true,
+  "init": false,
   "map": [
     "media:rw",
     "share:rw",
@@ -109,6 +112,6 @@
   "slug": "webtop-kde",
   "udev": true,
   "url": "https://github.com/alexbelgium/hassio-addons",
-  "version": "4.16-r0-ls53",
+  "version": "4.16-r0-ls61",
   "video": true
 }

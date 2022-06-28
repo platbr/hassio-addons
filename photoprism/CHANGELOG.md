@@ -1,3 +1,21 @@
+
+## 220617-jammy (18-06-2022)
+- Update to latest version from photoprism/photoprism
+
+## 220614-jammy (16-06-2022)
+- Update to latest version from photoprism/photoprism
+
+## 220528-jammy (31-05-2022)
+- Update to latest version from photoprism/photoprism
+
+## 220524-bookworm (26-05-2022)
+- Update to latest version from photoprism/photoprism
+- Feat: ingress implementation
+
+## 220517-jammy (19-05-2022)
+
+- Update to latest version from photoprism/photoprism
+- Implementation of ssl
 - Add codenotary sign
 
 ## 220302-impish (03-03-2022)

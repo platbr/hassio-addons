@@ -34,6 +34,8 @@
     "/dev/sdf",
     "/dev/sdg",
     "/dev/nvme",
+    "/dev/nvme0n1p1",
+    "/dev/nvme0n1p2",
     "/dev/mmcblk",
     "/dev/sda1",
     "/dev/sdb1",
@@ -61,6 +63,7 @@
   "ingress": true,
   "ingress_port": 0,
   "ingress_stream": true,
+  "init": false,
   "map": [
     "config:rw",
     "share:rw",
@@ -105,6 +108,6 @@
   "slug": "emby_nas",
   "startup": "services",
   "url": "https://github.com/alexbelgium/hassio-addons/tree/master/emby",
-  "version": "4.7.0.36",
+  "version": "4.8.0.3",
   "video": true
 }

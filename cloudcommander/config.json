@@ -16,6 +16,8 @@
     "/dev/sdf",
     "/dev/sdg",
     "/dev/nvme",
+    "/dev/nvme0n1p1",
+    "/dev/nvme0n1p2",
     "/dev/mmcblk",
     "/dev/sda1",
     "/dev/sdb1",
@@ -72,5 +74,5 @@
   },
   "slug": "cloudcommander",
   "url": "https://github.com/alexbelgium/hassio-addons/tree/master/cloudcommander",
-  "version": "16.1.0"
+  "version": "16.2.0"
 }

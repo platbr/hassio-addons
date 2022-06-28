@@ -16,12 +16,17 @@
 
 ARG BUILD_FROM
 ARG BUILD_VERSION
-ARG BUILD_UPSTREAM="220302-impish"
+ARG BUILD_UPSTREAM="220617-jammy"
 FROM photoprism/photoprism:latest
 
 ##################
 # 2 Modify Image #
 ##################
+
+# Set S6 wait time
+ENV S6_CMD_WAIT_FOR_SERVICES=1 \
+    S6_CMD_WAIT_FOR_SERVICES_MAXTIME=300000 \
+    S6_SERVICES_GRACETIME=300000
 
 RUN \
     # Create directories
@@ -33,10 +38,7 @@ RUN \
     /data/photoprism/storage/cache && \
     chmod -R 777 /data/photoprism && \
     chown -Rf photoprism:photoprism /data/photoprism && \
-    chmod -Rf a+rwx /data/photoprism && \
-    # rename entrypoint
-    mv /entrypoint.sh /entrypoint_photoprism.sh
-
+    chmod -Rf a+rwx /data/photoprism
 
 ##################
 # 3 Install apps #
@@ -51,6 +53,7 @@ ARG MODULES="00-banner.sh 90-config_yaml.sh 92-local_mounts.sh 92-smb_mounts.sh"
 # Automatic modules download
 RUN if ! command -v bash >/dev/null 2>/dev/null; then (apt-get update && apt-get install -yqq --no-install-recommends bash || apk add --no-cache bash) >/dev/null; fi \
     && if ! command -v curl >/dev/null 2>/dev/null; then (apt-get update && apt-get install -yqq --no-install-recommends curl || apk add --no-cache curl) >/dev/null; fi \
+    && apt-get update && apt-get install -yqq --no-install-recommends ca-certificates || apk add --no-cache ca-certificates >/dev/null || true \
     && mkdir -p /etc/cont-init.d \
     && for scripts in $MODULES; do echo "$scripts" && curl -f -L -s -S "https://raw.githubusercontent.com/alexbelgium/hassio-addons/master/.templates/$scripts" -o /etc/cont-init.d/"$scripts" && [ "$(sed -n '/\/bin/p;q' /etc/cont-init.d/"$scripts")" != "" ] || (echo "script failed to install $scripts" && exit 1); done \
     && chmod -R 755 /etc/cont-init.d || printf '%s\n' "${MODULES}" >/MODULESFILE
@@ -60,7 +63,8 @@ ENV PACKAGES="jq \
     curl \
     cifs-utils \
     keyutils \
-    coreutils"
+    coreutils\
+    nginx"
 
 # Automatic apps & bashio
 RUN if ! command -v bash >/dev/null 2>/dev/null; then (apt-get update && apt-get install -yqq --no-install-recommends bash || apk add --no-cache bash) >/dev/null; fi \

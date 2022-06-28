@@ -1,3 +1,24 @@
+
+## 1.2.7 (26-05-2022)
+- Update to latest version from TandoorRecipes/recipes
+
+## 1.2.6 (19-05-2022)
+- Update to latest version from TandoorRecipes/recipes
+
+## 1.2.5 (12-05-2022)
+- Update to latest version from TandoorRecipes/recipes
+
+## 1.2.4 (07-05-2022)
+- Update to latest version from TandoorRecipes/recipes
+
+## 1.2.3 (05-05-2022)
+- Update to latest version from TandoorRecipes/recipes
+
+## 1.2.1 (01-05-2022)
+- Update to latest version from TandoorRecipes/recipes
+
+## 1.2.0 (01-05-2022)
+- Update to latest version from TandoorRecipes/recipes
 - Add codenotary sign
 
 ## 1.1.4 (17-03-2022)

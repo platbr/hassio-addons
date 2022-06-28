@@ -16,6 +16,7 @@ profile addon_db21ed7f_plex_nas flags=(attach_disconnected,mediate_deleted) {
   network inet,
   network inet6,
   network netlink raw,
+  network unix dgram,
 
   capability setgid,
   capability setuid,
@@ -25,6 +26,12 @@ profile addon_db21ed7f_plex_nas flags=(attach_disconnected,mediate_deleted) {
   # capability sys_rawio,
 
 # S6-Overlay
+  /init ix,
+  /run/{s6,s6-rc*,service}/** ix,
+  /package/** ix,
+  /command/** ix,
+  /run/{,**} rwk,
+  /dev/tty rw,
   /bin/** ix,
   /usr/bin/** ix,
   /usr/lib/bashio/** ix,
@@ -40,6 +47,8 @@ profile addon_db21ed7f_plex_nas flags=(attach_disconnected,mediate_deleted) {
   # Files required
   /dev/sda1 mrwkl,
   /dev/sdb1 mrwkl,
+  /dev/nvme0 mrwkl,
+  /dev/nvme1 mrwkl,
   /dev/mmcblk0p1 mrwkl,
   /dev/ttyUSB0 mrwkl,
   /dev/* mrwkl,

@@ -16,19 +16,24 @@
 
 ARG BUILD_FROM=ghcr.io/hassio-addons/debian-base/amd64:5.2.2
 ARG BUILD_VERSION
-ARG BUILD_UPSTREAM="1.24.0"
+ARG BUILD_UPSTREAM="1.25.0"
 FROM "vaultwarden/server:${BUILD_UPSTREAM}" as vaultwarden
 FROM ${BUILD_FROM}
 SHELL ["/bin/bash", "-o", "pipefail", "-c"]
 
 # Get the Bitwarden from official images
 COPY --from=vaultwarden /vaultwarden /opt/vaultwarden
-COPY --from=vaultwarden /Rocket.toml /opt/Rocket.toml
+#COPY --from=vaultwarden /Rocket.toml /opt/Rocket.toml
 COPY --from=vaultwarden /web-vault /opt/web-vault
 
 ##################
 # 2 Modify Image #
 ##################
+
+# Set S6 wait time
+ENV S6_CMD_WAIT_FOR_SERVICES=1 \
+    S6_CMD_WAIT_FOR_SERVICES_MAXTIME=300000 \
+    S6_SERVICES_GRACETIME=300000
 
 ##################
 # 3 Install apps #
@@ -43,6 +48,7 @@ ARG MODULES="00-banner.sh"
 # Automatic modules download
 RUN if ! command -v bash >/dev/null 2>/dev/null; then (apt-get update && apt-get install -yqq --no-install-recommends bash || apk add --no-cache bash) >/dev/null; fi \
     && if ! command -v curl >/dev/null 2>/dev/null; then (apt-get update && apt-get install -yqq --no-install-recommends curl || apk add --no-cache curl) >/dev/null; fi \
+    && apt-get update && apt-get install -yqq --no-install-recommends ca-certificates || apk add --no-cache ca-certificates >/dev/null || true \
     && mkdir -p /etc/cont-init.d \
     && for scripts in $MODULES; do echo "$scripts" && curl -f -L -s -S "https://raw.githubusercontent.com/alexbelgium/hassio-addons/master/.templates/$scripts" -o /etc/cont-init.d/"$scripts" && [ "$(sed -n '/\/bin/p;q' /etc/cont-init.d/"$scripts")" != "" ] || (echo "script failed to install $scripts" && exit 1); done \
     && chmod -R 755 /etc/cont-init.d || printf '%s\n' "${MODULES}" >/MODULESFILE
@@ -64,6 +70,8 @@ RUN if ! command -v bash >/dev/null 2>/dev/null; then (apt-get update && apt-get
 ################
 # 4 Entrypoint #
 ################
+
+RUN chmod 777 /etc/services.d/*/*
 
 #RUN chmod 777 /entrypoint.sh
 #WORKDIR /

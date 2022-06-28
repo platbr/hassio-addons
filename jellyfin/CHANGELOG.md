@@ -1,4 +1,31 @@
 
+## 10.8.1-1-ls167 (28-06-2022)
+- Update to latest version from linuxserver/docker-jellyfin
+
+## 10.8.0-1-ls166 (25-06-2022)
+- Update to latest version from linuxserver/docker-jellyfin
+
+## 10.8.0-1-ls165 (18-06-2022)
+- Update to latest version from linuxserver/docker-jellyfin
+
+## 10.8.0-1-ls164 (14-06-2022)
+- Update to latest version from linuxserver/docker-jellyfin
+
+## 10.7.7-1-ls162 (11-06-2022)
+- Update to latest version from linuxserver/docker-jellyfin
+
+## 10.7.7-1-ls161 (31-05-2022)
+- Update to latest version from linuxserver/docker-jellyfin
+
+## 10.7.7-1-ls160 (21-05-2022)
+- Update to latest version from linuxserver/docker-jellyfin
+
+## 10.7.7-1-ls159 (12-05-2022)
+- Update to latest version from linuxserver/docker-jellyfin
+
+## 10.7.7-1-ls158 (05-05-2022)
+- Update to latest version from linuxserver/docker-jellyfin
+
 ## 10.7.7-1-ls157 (02-04-2022)
 - Update to latest version from linuxserver/docker-jellyfin
 - Ingress port changed to avoid conflicts

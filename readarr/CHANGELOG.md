@@ -1,4 +1,34 @@
 
+## nightly-0.1.1.1377-ls124 (23-06-2022)
+- Update to latest version from linuxserver/docker-readarr
+
+## nightly-0.1.1.1374-ls123 (18-06-2022)
+- Update to latest version from linuxserver/docker-readarr
+
+## nightly-0.1.1.1372-ls122 (16-06-2022)
+- Update to latest version from linuxserver/docker-readarr
+
+## nightly-0.1.1.1352-ls121 (31-05-2022)
+- Update to latest version from linuxserver/docker-readarr
+
+## nightly-0.1.1.1337-ls119 (26-05-2022)
+- Update to latest version from linuxserver/docker-readarr
+
+## nightly-0.1.1.1323-ls117 (17-05-2022)
+- Update to latest version from linuxserver/docker-readarr
+
+## nightly-0.1.1.1320-ls116 (12-05-2022)
+- Update to latest version from linuxserver/docker-readarr
+
+## nightly-0.1.1.1320-ls115 (11-05-2022)
+- Update to latest version from linuxserver/docker-readarr
+
+## nightly-0.1.1.1318-ls114 (10-05-2022)
+- Update to latest version from linuxserver/docker-readarr
+
+## nightly-0.1.1.1314-ls113 (05-05-2022)
+- Update to latest version from linuxserver/docker-readarr
+
 ## nightly-0.1.1.1314-ls112 (28-04-2022)
 - Update to latest version from linuxserver/docker-readarr
 

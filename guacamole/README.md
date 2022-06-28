@@ -1,10 +1,10 @@
-# Home assistant add-on: calibre
+# Home assistant add-on: guacamole
 
 [![Donate][donation-badge]](https://www.buymeacoffee.com/alexbelgium)
 
-![Version](https://img.shields.io/badge/dynamic/json?label=Version&query=%24.version&url=https%3A%2F%2Fraw.githubusercontent.com%2Falexbelgium%2Fhassio-addons%2Fmaster%2Fcalibre%2Fconfig.json)
-![Ingress](https://img.shields.io/badge/dynamic/json?label=Ingress&query=%24.ingress&url=https%3A%2F%2Fraw.githubusercontent.com%2Falexbelgium%2Fhassio-addons%2Fmaster%2Fcalibre%2Fconfig.json)
-![Arch](https://img.shields.io/badge/dynamic/json?color=success&label=Arch&query=%24.arch&url=https%3A%2F%2Fraw.githubusercontent.com%2Falexbelgium%2Fhassio-addons%2Fmaster%2Fcalibre%2Fconfig.json)
+![Version](https://img.shields.io/badge/dynamic/json?label=Version&query=%24.version&url=https%3A%2F%2Fraw.githubusercontent.com%2Falexbelgium%2Fhassio-addons%2Fmaster%2Fguacamole%2Fconfig.json)
+![Ingress](https://img.shields.io/badge/dynamic/json?label=Ingress&query=%24.ingress&url=https%3A%2F%2Fraw.githubusercontent.com%2Falexbelgium%2Fhassio-addons%2Fmaster%2Fguacamole%2Fconfig.json)
+![Arch](https://img.shields.io/badge/dynamic/json?color=success&label=Arch&query=%24.arch&url=https%3A%2F%2Fraw.githubusercontent.com%2Falexbelgium%2Fhassio-addons%2Fmaster%2Fguacamole%2Fconfig.json)
 
 [![Codacy Badge](https://app.codacy.com/project/badge/Grade/9c6cf10bdbba45ecb202d7f579b5be0e)](https://www.codacy.com/gh/alexbelgium/hassio-addons/dashboard?utm_source=github.com&utm_medium=referral&utm_content=alexbelgium/hassio-addons&utm_campaign=Badge_Grade)
 [![GitHub Super-Linter](https://github.com/alexbelgium/hassio-addons/workflows/Lint%20Code%20Base/badge.svg)](https://github.com/marketplace/actions/super-linter)
@@ -18,15 +18,23 @@ _Thanks to everyone having starred my repo! To star it click on the image below,
 
 ## About
 
----
+[Apache Guacamole](https://guacamole.apache.org/) is a clientless remote desktop gateway. It supports standard protocols like VNC, RDP, and SSH. This container is only the backend server component needed to use The official or 3rd party HTML5 frontends.
 
-[Calibre](https://calibre-ebook.com/) is a powerful and easy to use e-book manager. Users say it’s outstanding and a must-have. It’ll allow you to do nearly everything and it takes things a step beyond normal e-book software. It’s also completely free and open source and great for both casual users and computer experts.
+This addon is based on the docker image https://github.com/maxwaldorf/guacamole
 
-This addon is based on the docker image https://github.com/linuxserver/docker-calibre
+## Configuration
+
+Webui can be found at <http://your-ip:8080>.
+
+The default username is guacadmin with password guacadmin.
+
+Addons options :
+```yaml
+EXTENSIONS: auth-totp # see https://github.com/maxwaldorf/guacamole#enabling-extensions
+TZ: Europe/Paris # Sets a specific timezone
+```
 
 ## Installation
-
----
 
 The installation of this add-on is pretty straightforward and not different in comparison to installing any other add-on.
 
@@ -39,34 +47,12 @@ The installation of this add-on is pretty straightforward and not different in c
 1. Check the logs of the add-on to see if everything went well.
 1. Open the webUI and adapt the software options
 
-## Configuration
-
----
-
-Webui can be found at <http://your-ip:PORT>.
-The default username/password : described in the startup log.
-Configurations can be done through the app webUI, except for the following options
-
-```yaml
-GUID: user
-GPID: user
-TZ: timezone
-PASSWORD: Optionally set a password for the gui
-CLI_ARGS: Optionally pass cli start arguments to calibre
-localdisks: sda1 #put the hardware name of your drive to mount separated by commas, or its label. Ex: sda1, sdb1, MYNAS...
-networkdisks: "//SERVER/SHARE" # optional, list of smb servers to mount, separated by commas
-cifsusername: "username" # optional, smb username, same for all smb shares
-cifspassword: "password" # optional, smb password
-```
-
 ## Support
 
 Create an issue on github
 
 ## Illustration
 
----
-
-![illustration](https://calibre.com/img/slider/artistdetails.png)
+![illustration](https://www.linuxserver.io/user/pages/content/images/2021/05/menu.png)
 
 [repository]: https://github.com/alexbelgium/hassio-addons

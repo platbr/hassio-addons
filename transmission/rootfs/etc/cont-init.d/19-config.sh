@@ -21,6 +21,7 @@ CONFIGDIR="/config/transmission"
 #Default folders
 echo "Updating folders"
 mkdir -p /config/transmission || true
+mkdir -p /watch || true
 chown -R abc:abc /config/transmission || true
 
 if ! bashio::fs.file_exists "$CONFIGDIR/settings.json"; then
@@ -78,6 +79,10 @@ CONFIG=$(bashio::jq "${CONFIG}" ".\"incomplete-dir\"=\"${incomplete_dir}\"")
 CONFIG=$(bashio::jq "${CONFIG}" ".\"download-dir\"=\"${download_dir}\"")
 CONFIG=$(bashio::jq "${CONFIG}" ".\"rpc-host-whitelist-enabled\"=false")
 CONFIG=$(bashio::jq "${CONFIG}" ".\"bind-address-ipv4\"=\"0.0.0.0\"")
+
+if bashio::config.has_value 'watch_dir'; then
+    CONFIG=$(bashio::jq "${CONFIG}" ".\"watch-dir\"=\"$(bashio::config 'watch_dir')\"")
+fi
 
 echo "${CONFIG}" >"$CONFIGDIR"/settings.json &&
 jq . -S "$CONFIGDIR"/settings.json | cat >temp.json && mv temp.json $CONFIGDIR/settings.json

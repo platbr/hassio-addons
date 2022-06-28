@@ -20,6 +20,8 @@
     "/dev/sdf",
     "/dev/sdg",
     "/dev/nvme",
+    "/dev/nvme0n1p1",
+    "/dev/nvme0n1p2",
     "/dev/mmcblk",
     "/dev/sda1",
     "/dev/sdb1",
@@ -47,6 +49,7 @@
     "PGID": "0",
     "PUID": "0"
   },
+  "init": false,
   "map": [
     "config:rw",
     "share:rw",
@@ -79,6 +82,6 @@
   "slug": "bazarr_nas",
   "startup": "services",
   "url": "https://github.com/alexbelgium/hassio-addons/tree/master/bazarr",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "webui": "http://[HOST]:[PORT:6767]"
 }

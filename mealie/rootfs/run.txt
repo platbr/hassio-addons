@@ -45,7 +45,33 @@ fi
 ################
 
 #Sets caddyfile to 9925 as default port
-sed -i "s/80/9925/g" /app/Caddyfile
+if [ -f /app/Caddyfile ]; then
+    sed -i "s/80/9925/g" /app/Caddyfile
+    echo "Caddyfile adapted"
+fi
+
+#Sets caddyfile to 9925 as default port
+if [ -f /app/frontend/Caddyfile ]; then
+    sed -i "s/3000/9925/g" /app/frontend/Caddyfile
+    echo "Caddyfile adapted"
+fi
+
+####################
+# Export variables #
+####################
+
+bashio::log.info "Exporting variables"
+for k in $(bashio::jq "/data/options.json" 'keys | .[]'); do
+    bashio::log.blue "$k"="$(bashio::config "$k")"
+    export "$k"="$(bashio::config "$k")"
+done
+
+###############
+# PERMISSIONS #
+###############
+
+echo "Permissions adapted"
+chmod -R 777 /data
 
 #######
 # SSL #
@@ -56,5 +82,6 @@ if bashio::config.true 'ssl'; then
    bashio::log.info "Configuring ssl"
    CERTFILE=$(bashio::config 'certfile')
    KEYFILE=$(bashio::config 'keyfile')
-   sed -i "7 i tls /ssl/$CERTFILE /ssl/$KEYFILE" /app/Caddyfile
+   if [ -f /app/Caddyfile ]; then sed -i "7 i tls /ssl/$CERTFILE /ssl/$KEYFILE" /app/Caddyfile; fi
+   if [ -f /app/frontend/Caddyfile ]; then sed -i "7 i tls /ssl/$CERTFILE /ssl/$KEYFILE" /app/frontend/Caddyfile; fi
 fi

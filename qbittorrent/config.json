@@ -16,6 +16,8 @@
     "/dev/sdf",
     "/dev/sdg",
     "/dev/nvme",
+    "/dev/nvme0n1p1",
+    "/dev/nvme0n1p2",
     "/dev/mmcblk",
     "/dev/sda1",
     "/dev/sdb1",
@@ -45,6 +47,7 @@
     "WEBUI_PORT": "8080"
   },
   "ingress": true,
+  "init": false,
   "map": [
     "media:rw",
     "config:rw",
@@ -108,5 +111,5 @@
   },
   "slug": "qbittorrent",
   "url": "https://github.com/alexbelgium/hassio-addons",
-  "version": "4.4.2-r4-ls189"
+  "version": "4.4.3.1-r1-ls204-3_troubleshooting_iamkarlson"
 }

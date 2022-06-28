@@ -15,6 +15,8 @@
     "/dev/sdf",
     "/dev/sdg",
     "/dev/nvme",
+    "/dev/nvme0n1p1",
+    "/dev/nvme0n1p2",
     "/dev/mmcblk",
     "/dev/sda1",
     "/dev/sdb1",
@@ -42,6 +44,7 @@
     "PGID": "0",
     "PUID": "0"
   },
+  "init": false,
   "map": [
     "config:rw",
     "share:rw",
@@ -76,6 +79,6 @@
   "slug": "readarr_nas",
   "startup": "services",
   "url": "https://github.com/alexbelgium/hassio-addons/tree/master/readarr",
-  "version": "nightly-0.1.1.1314-ls112",
+  "version": "nightly-0.1.1.1377-ls124",
   "webui": "http://[HOST]:[PORT:8787]"
 }

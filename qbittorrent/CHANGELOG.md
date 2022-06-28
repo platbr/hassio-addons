@@ -1,4 +1,36 @@
 
+## 4.4.3.1-r1-ls204 (18-06-2022)
+- Update to latest version from linuxserver/docker-qbittorrent
+
+## 4.4.3.1-r1-ls201 (14-06-2022)
+- Update to latest version from linuxserver/docker-qbittorrent
+- Addition of optional noserverino in smb mount code
+
+## 4.4.3.1-r1-ls200 (06-06-2022)
+- Update to latest version from linuxserver/docker-qbittorrent
+
+## 4.4.3.1-r1-ls199 (02-06-2022)
+- Update to latest version from linuxserver/docker-qbittorrent
+
+## 4.4.3.1-r0-ls198 (31-05-2022)
+- Update to latest version from linuxserver/docker-qbittorrent
+
+## 4.4.3-r0-ls197 (26-05-2022)
+- Update to latest version from linuxserver/docker-qbittorrent
+
+## 4.4.3-r0-ls195 (24-05-2022)
+- Update to latest version from linuxserver/docker-qbittorrent
+
+## 4.4.2-r5-ls193 (17-05-2022)
+- Update to latest version from linuxserver/docker-qbittorrent
+
+## 4.4.2-r4-ls191 (10-05-2022)
+- Update to latest version from linuxserver/docker-qbittorrent
+- Feature : message in log showing if vpn alt mode is working
+
+## 4.4.2-r4-ls190 (03-05-2022)
+- Update to latest version from linuxserver/docker-qbittorrent
+
 ## 4.4.2-r4-ls189 (27-04-2022)
 - Update to latest version from linuxserver/docker-qbittorrent
 - New feature "silent" : true shows only error messages of qbittorrent and nginx

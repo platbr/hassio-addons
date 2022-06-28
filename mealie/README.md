@@ -1,3 +1,8 @@
+## &#9888; Open Request : [[Request] Mealie v1 (opened 2022-06-09)](https://github.com/alexbelgium/hassio-addons/issues/356) by [@Tommatheussen](https://github.com/Tommatheussen)
+## Breaking change : no database migration with v1.0. Please backup your database from within Mealie before upgrading, then restore the database after upgrading. Infos here : https://hay-kot.github.io/mealie/documentation/getting-started/updating/. Something to note however about the database migration is that only the recipe data gets migrated. Not user data or other settings, and the favorite recipes are also no longer listed as such so they need to be selected again (Thanks @SeeThisIsMe)
+
+Thanks for your help! Now I'll get a regular scheduled recipe backup sorted out ;)
+
 # Hass.io Add-ons: Mealie
 
 [![Donate][donation-badge]](https://www.buymeacoffee.com/alexbelgium)
@@ -21,6 +26,7 @@ _Thanks to everyone having starred my repo! To star it click on the image below,
 ## About
 
 Mealie is a self hosted recipe manager and meal planner with a RestAPI backend and a reactive frontend application built in Vue for a pleasant user experience for the whole family.
+This addon for mealie 1.0 is based on the combined [docker image](https://hub.docker.com/r/hendrix04/mealie-combined) from hendrix04.
 This addon is based on the [docker image](https://hub.docker.com/r/hkotel/mealie) from hay-kot.
 
 ## Installation

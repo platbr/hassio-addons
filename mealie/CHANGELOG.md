@@ -1,3 +1,11 @@
+- Breaking change : amd64 updated to mealie 1.0
+- You'll lose your database : first do a backup from within mealie, then restore after upgrading
+
+## 1.0.0 (18-06-2022)
+- Update to latest version from hay-kot/mealie
+
+## 1.0.0.1 (26-05-2022)
+- Update to latest version from hay-kot/mealie
 - Add codenotary sign
 
 ## 0.5.6 (04-02-2022)

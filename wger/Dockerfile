@@ -21,6 +21,11 @@ FROM wger/devel:latest
 # 2 Modify Image #
 ##################
 
+# Set S6 wait time
+ENV S6_CMD_WAIT_FOR_SERVICES=1 \
+    S6_CMD_WAIT_FOR_SERVICES_MAXTIME=300000 \
+    S6_SERVICES_GRACETIME=300000
+
 VOLUME [ "/data" ]
 
 #USER root
